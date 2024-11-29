@@ -17,7 +17,13 @@ import Router from './routes/route.js';
 
 dotenv.config();
 
-const app = express();
+const app = express()
+app.use(cors({
+    origin: ["Tttps://deploy-mern-1whq.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials:  true
+}))
+;
 
 app.use(cors());
 app.use(bodyParser.json({ extended: true }));
@@ -31,4 +37,4 @@ const password = process.env.DB_PASSWORD;
 
 Connection(username, password);
 
-app.listen(PORT, () => console.log(`Server is running successfully on PORT ${PORT}`));
+app.listen(PORT, () => console.log(`Server is Jogging Flawlessly on PORT ${PORT}`));
