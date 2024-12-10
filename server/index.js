@@ -3,12 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 
-// // code we added from github video
-// const path = require("path");
-// app.get("/", (req, res)  => {
-//     app.use(express.static(path.resolve(_dirname, "client", "build")));
-// res.sendfile(path.resolve(_dirname, "client", "build", "index.html"));
-// });
+
 
 //components
 import Connection from './database/db.js';
@@ -32,4 +27,4 @@ const password = process.env.DB_PASSWORD;
 
 Connection(username, password);
 
-app.listen(PORT, () => console.log(`Server is Jogging Flawlessly on PORT ${PORT}`));
+app.listen(PORT, () => console.log(`Server is Running Successfully on PORT ${PORT}`));
